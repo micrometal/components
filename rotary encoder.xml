@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component version="1.0" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+
+<declaration>
+  <meta name="name" value="Rotary Encoder"/>
+  <meta name="author" value="micrometal"/>
+  <meta name="guid" value="3a63875d-ed82-4256-8a3a-917e68a65cf2"/> 
+  <meta name="minsize" value="80" />
+  <meta name="canresize" value="true"/>
+  <meta name="canflip" value="true"/>
+  
+  <flags>
+      <option>MiddleMustAlign</option>
+  </flags>
+  
+</declaration> 
+
+<connections>
+  <group conditions="_Horizontal">
+    <connection name="a" start="_Start-20x" end="_Middle-20x-20y" edge="start"/>
+    <connection name="c" start="_Start" end="_Middle-20y" edge="start"/>
+    <connection name="b" start="_Start+20x" end="_Middle+20x-20y" edge="start"/>
+    <connection name="e" start="_Middle+20x+10y" end="_End" edge="end"/>
+    <connection name="f" start="_Middle+20x+10y" end="_End" edge="end"/>
+  </group>
+  <group conditions="!_Horizontal">
+    <connection name="a" start="_Start-20x" end="_Middle-20x-20y" edge="start"/>
+    <connection name="c" start="_Start" end="_Middle-20x" edge="start"/>
+    <connection name="b" start="_Start+20y" end="_Middle-20x+20y" edge="start"/>
+    <connection name="e" start="_Middle-10x+20y" end="_End" edge="end"/>
+    <connection name="f" start="_Middle+10x+20y" end="_End" edge="end"/>
+  </group>
+</connections>
+
+<render>
+    <group conditions="_Horizontal">
+      <line start="_Start-20y" end="_Middle-20x-20y"/>
+      <line start="_Middle-20x-20y" end="_Middle-10x-10y"/>
+      <line start="_Start" end="_Middle-20x"/>
+      <line start="_Start+20y" end="_Middle-20x+20y"/>
+      <line start="_Middle-20x+20y" end="_Middle-10x+10y"/>
+      <ellipse centre="_Middle" radiusx="24" radiusy="24" />
+      <line start="_Middle+20x-10y" end="_End-10y"/>
+      <ellipse centre="_Middle+18x-10y" radiusx="3" radiusy="3"/>
+      <line start="_Middle+20x+10y" end="_End+10y"/>
+      <ellipse centre="_Middle+18x+10y" radiusx="3" radiusy="3"/>
+      <line start="_Middle+12x-12y" end="_Middle+12x+12y"/>
+      <line start="_Middle+10x-2y" end="_Middle+10x+2y"/>
+      <text value="A" x="_Middle-5" y="_Middle-10" align="CentreCentre"/>
+      <text value="C" x="_Middle-10" y="_Middle" align="CentreCentre"/>
+      <text value="B" x="_Middle-5" y="_Middle+10" align="CentreCentre"/>
+    </group>
+
+    <group conditions="!_Horizontal">
+      <line start="_Start-20x" end="_Middle-20x-20y"/>
+      <line start="_Middle-20x-20y" end="_Middle-10x-10y"/>
+      <line start="_Start" end="_Middle-20y"/>
+      <line start="_Start+20x" end="_Middle+20x-20y"/>
+      <line start="_Middle+20x-20y" end="_Middle+10x-10y"/>
+      <ellipse centre="_Middle" radiusx="24" radiusy="24" />
+      <line start="_Middle-10x+20y" end="_End-10x"/>
+      <ellipse centre="_Middle-10x+18y" radiusx="3" radiusy="3"/>
+      <line start="_Middle+10x+20y" end="_End+10x"/>
+      <ellipse centre="_Middle+10x+18y" radiusx="3" radiusy="3"/>
+      <line start="_Middle-12x+12y" end="_Middle+12x+12y"/>
+      <line start="_Middle-2x+10y" end="_Middle+2x+10y"/>
+      <text value="A" x="_Middle-10" y="_Middle-4" align="CentreCentre"/>
+      <text value="C" x="_Middle" y="_Middle-10" align="CentreCentre"/>
+      <text value="B" x="_Middle+10" y="_Middle-4" align="CentreCentre"/>
+    </group>
+</render>
+</component>
